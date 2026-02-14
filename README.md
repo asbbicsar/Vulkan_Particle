@@ -1,6 +1,8 @@
-# Vulkan Project
+# Vulkan Particle
 
-이 프로젝트는 Vulkan API를 사용한 그래픽스 프로젝트입니다. 저장소 용량 최적화와 이식성을 위해 Vulkan SDK는 포함되어 있지 않으며, 환경 변수를 통해 로컬 SDK를 참조합니다.
+이 프로젝트는 Vulkan API를 사용하여 구현한 파티클 시스템 중력 시뮬레이션입니다. 저장소 용량 최적화와 이식성을 위해 Vulkan SDK는 포함되어 있지 않으며, 환경 변수를 통해 로컬 SDK를 참조합니다.
+
+This project is a particle system gravity simulation implemented using the Vulkan API. To optimize storage space and portability, the Vulkan SDK is not included, and the local SDK is referenced via environment variables.
 
 ---
 
@@ -58,25 +60,3 @@ This project uses **Macros** instead of absolute paths for seamless collaboratio
 * **Linker Input:** `vulkan-1.lib`
 
 ---
-
-## 🚀 Getting Started
-
-1. **Clone** this repository:
-```bash
-git clone [https://github.com/your-username/your-repo-name.git](https://github.com/your-username/your-repo-name.git)
-
-```
-
-
-2. Ensure that other external libraries (GLFW, GLM) are located in the `external/` directory as configured.
-3. Open the `.sln` file in Visual Studio.
-4. Set the solution platform to **x64**.
-5. **Build (Ctrl + Shift + B)** and Run.
-
----
-
-### 💡 Note on SDK Exclusion
-
-Vulkan SDK는 용량이 크고 사용자 환경(OS/Driver)에 따라 다르기 때문에 저장소에 포함하지 않습니다. 대신 `$(VULKAN_SDK)` 매크로를 활용하여 로컬에 설치된 SDK를 참조하도록 설계되었습니다.
-
-```
