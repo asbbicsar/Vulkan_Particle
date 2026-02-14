@@ -72,8 +72,8 @@
   </ImportGroup>
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
-    <IncludePath>C:\VulkanSDK\1.4.328.1\Include;C:\Users\asbbi\Documents\Visual Studio 18\Libraries\glfw-3.4.bin.WIN64\include;C:\Users\asbbi\Documents\Visual Studio 18\Libraries\glm;C:\Users\asbbi\Documents\Visual Studio 18\Libraries;C:\Users\asbbi\Documents\Visual Studio 18\Libraries\tiny_obj_loader;$(IncludePath)</IncludePath>
-    <LibraryPath>C:\Users\asbbi\Documents\Visual Studio 18\Libraries\glfw-3.4.bin.WIN64\lib-vc2022;C:\VulkanSDK\1.4.328.1\Lib;C:\Users\asbbi\Documents\Visual Studio 18\Libraries;$(LibraryPath)</LibraryPath>
+    <IncludePath>$(IncludePath)</IncludePath>
+    <LibraryPath>$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
@@ -110,11 +110,13 @@
       <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
       <LanguageStandard>stdcpplatest</LanguageStandard>
+      <AdditionalIncludeDirectories>$(VULKAN_SDK)\Include;$(ProjectDir)external\glm;$(ProjectDir)external\glfw\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <AdditionalDependencies>vulkan-1.lib;glfw3.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>$(VULKAN_SDK)\Lib;$(ProjectDir)external\glfw\lib-vc2022;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
